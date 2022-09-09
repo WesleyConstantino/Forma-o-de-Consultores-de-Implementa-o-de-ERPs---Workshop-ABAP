@@ -8,7 +8,7 @@ REPORT ZZ_EXERCO08_00.
 v_num = 2.
 
 if v_num MOD 2 = 0.
-  WRITE: 'Impar!'.
+  WRITE: 'Par!'.
 else.
   WRITE: 'Impar!'.
 endif.
