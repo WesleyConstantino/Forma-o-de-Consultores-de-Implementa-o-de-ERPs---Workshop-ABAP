@@ -1,11 +1,11 @@
 REPORT ZZ_EXERCO02_00.
 
-    DATA: 
+    DATA:
       v_a TYPE I,
       v_b TYPE I,
       v_c TYPE I.
 
- 
+
 v_a = 3.
 v_b = 2.
 v_c = 5.
@@ -15,26 +15,26 @@ if v_a > v_b.
 else.
   WRITE: 'Falso!'.
 endif.
-    
-if not (v_b = v_a).
+
+if not ( v_b EQ v_a ).
   WRITE: 'Verdadeiro!'.
 else.
   WRITE: 'Falso!'.
 endif.
 
-if not (v_a >= v_b AND v_c <> 5).
+if not ( v_a >= v_b AND v_c <> 5 ).
   WRITE: 'Verdadeiro!'.
 else.
   WRITE: 'Falso!'.
 endif.
 
-if v_b < v_a OR v_a = 3.
+if v_b < v_a OR v_a EQ 3.
   WRITE: 'Verdadeiro!'.
 else.
   WRITE: 'Falso!'.
 endif.
 
-if v_a > v_b OR v_a =3.
+if v_a > v_b OR v_a EQ 3.
   WRITE: 'Verdadeiro!'.
 else.
   WRITE: 'Falso!'.
