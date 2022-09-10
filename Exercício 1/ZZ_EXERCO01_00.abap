@@ -1,5 +1,3 @@
-Programa ZZ_EXERCO01_##
-
 REPORT ZZ_EXERCO01_00.
 
     DATA: 
