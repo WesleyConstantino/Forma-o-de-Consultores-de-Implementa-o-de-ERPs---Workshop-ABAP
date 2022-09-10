@@ -1,16 +1,14 @@
-Programa ZZ_EXERCO03_##
-
 REPORT ZZ_EXERCO03_00.
 
-    DATA: 
-      v_altura TYPE F,
-      v_base TYPE F,
-      v_area TYPE F.
+    DATA:
+      v_area TYPE p decimals 2.
 
- 
-v_altura = 180.0.
-v_base = 100.0.
-v_area = v_altura * v_base / 2.
+ PARAMETERS: v_alt TYPE p decimals 2,
+             v_base TYPE p decimals 2.
+
+
+START-OF-SELECTION.
+v_area = v_alt * v_base / 2.
 
 
 
