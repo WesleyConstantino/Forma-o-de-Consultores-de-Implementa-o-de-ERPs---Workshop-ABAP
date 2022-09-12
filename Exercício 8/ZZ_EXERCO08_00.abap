@@ -1,9 +1,9 @@
 REPORT ZZ_EXERCO08_00.
 
-    DATA: 
+ PARAMETERS: 
       v_num TYPE I,
 
-v_num = 2.
+START-OF-SELECTION.
 
 if v_num MOD 2 = 0.
   WRITE: 'Par!'.
