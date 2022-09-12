@@ -17,4 +17,4 @@ PERFORM f_exibe_msg.
 
 FORM f_exibe_msg.
   WRITE: 'A média do aluno é: ', v_media_aluno.
-ENFORM.
+ENDFORM.
