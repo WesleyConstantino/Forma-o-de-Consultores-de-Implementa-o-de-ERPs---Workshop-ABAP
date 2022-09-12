@@ -18,7 +18,7 @@ PERFORM f_exibe_msg_2.
 
 FORM f_exibe_msg_1.
    WRITE: 'A idade atual é: ', v_idade_atual.
-ENFORM.
+ENDFORM.
 FORM f_exibe_msg_2.
    WRITE: 'A idade em 2015 foi: ', v_idade_2015.
-ENFORM.
+ENDFORM.
