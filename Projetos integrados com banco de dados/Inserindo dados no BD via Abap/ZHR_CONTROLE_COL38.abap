@@ -21,9 +21,10 @@ PARAMETERS: p_RE TYPE zhr001_38-zz_re,
 
 "executa daqui em diante quando o usuario aperta enter
 START-OF-SELECTION.
+"PERFORM chama a "função" FORM, nesse caso o forme é f_insert
 PERFORM f_insert.
 
-"form executa um bloco de comandos sem dar um retorno
+"form executa um bloco de comandos, é como se fosse uma função em outras linguagens
 *nesse caso insere passa os valores armazenados em wa_001-zz_re para o campo p_RE da tabela do banco de dados, no primeiro caso a baixo
 *No exemplo de wa_001-zz_re = p_RE, seguimos a regra <Nome da variável que armazena os dados> < - traco para separ >  < Linha da tabela do BD >  < Variável dentro da outra variável que armazena um valor especiifico >
 FORM f_insert.
