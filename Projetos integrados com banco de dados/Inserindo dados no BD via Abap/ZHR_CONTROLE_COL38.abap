@@ -13,7 +13,7 @@ DATA: wa_001 type zhr001_38.
 *aqui defino as variáveis do TYPE da minha tabela sendo de uma linha específica 
 *No exemplo de p_RE TYPE zhr001_38-zz_re, seguimos a regra <Nome da variável> TYPE <Nome da tabela do BD> <<-> o traco sempara a tabela da linha> <Nome da linha da tabela> 
 *PARAMETER cria a interface do usuario (com campos para ele preencher)
-PARAMETERS: p_RE TYPE zhr001_38-zz_re,
+PARAMETERS: p_RE TYPE zhr001_38-zz_re OBLIGATORY,  "OBLIGATORY faz o preenchimento um campo pelo usuário ser obrigatório
             p_nome TYPE zhr001_38-zz_nome_emp,
             p_cargo TYPE zhr001_38-zz_cargo,
             p_stt TYPE zhr001_38-zz_status_emp,
