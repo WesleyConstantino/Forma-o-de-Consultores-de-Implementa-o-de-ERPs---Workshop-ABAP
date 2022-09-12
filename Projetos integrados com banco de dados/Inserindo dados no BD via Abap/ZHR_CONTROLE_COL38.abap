@@ -28,6 +28,8 @@ PERFORM f_insert.
 *nesse caso insere passa os valores armazenados em wa_001-zz_re para o campo p_RE da tabela do banco de dados, no primeiro caso a baixo
 *No exemplo de wa_001-zz_re = p_RE, seguimos a regra <Nome da variável que armazena os dados> < - traco para separ >  < Linha da tabela do BD >  < Variável dentro da outra variável que armazena um valor especiifico >
 FORM f_insert.
+*CLEAR limpa a variável antes de usar no FORM, caso tenha sido usada anteriormente para não dar erros
+CLEAR: wa_001.
 wa_001-zz_re = p_RE.
 wa_001-zz_nome_emp = p_nome.
 wa_001-zz_cargo = p_cargo.
