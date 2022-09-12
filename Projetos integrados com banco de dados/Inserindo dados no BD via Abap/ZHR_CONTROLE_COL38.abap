@@ -46,6 +46,7 @@ IF SY-subrc IS INITIAL.
 *mensagem de sucesso
  MESSAGE S208(00) WITH 'SALVO COM SUCESSO!'.
 ELSE.
+"ROLLBACK WORK desfaz tudo o que aconteceu na operação
  ROLLBACK WORK.
 *mensagem de erro
  MESSAGE S208(00) WITH 'ERRO AO GRAVAR!'DISPLAY LIKE 'E'.
