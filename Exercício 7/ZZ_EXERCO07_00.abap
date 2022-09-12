@@ -21,4 +21,4 @@ PERFORM f_exibe_msg.
 
 FORM f_exibe_msg.
    WRITE: 'O número maior é: ', v_maior.
-ENFORM.
+ENDFORM.
