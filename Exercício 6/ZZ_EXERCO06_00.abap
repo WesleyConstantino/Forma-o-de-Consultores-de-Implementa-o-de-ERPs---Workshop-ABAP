@@ -1,9 +1,9 @@
 REPORT ZZ_EXERCO06_00.
 
-    DATA: 
+   PARAMETERS: 
       v_valor TYPE I.
  
-v_valor = 2.
+START-OF-SELECTION.
 
 if v_valor <= 3.
   WRITE: v_valor .
