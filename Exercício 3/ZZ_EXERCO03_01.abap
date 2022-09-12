@@ -15,4 +15,4 @@ PERFORM f_exibe_msg.
 
 FORM f_exibe_msg.
    WRITE: 'A área do triângulo é: ', v_area.
-ENFORM.
+ENDFORM.
