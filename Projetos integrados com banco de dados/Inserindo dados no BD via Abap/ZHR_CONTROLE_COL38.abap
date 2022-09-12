@@ -41,7 +41,7 @@ INSERT zhr001_38 FROM wa_001.
 *IS INITIAL é a mesma coisa que == 0
 *SY-subrc é uma espécie de biblioteca que retorna 0 para operacoes bem sucedidas e qualquer outro valor para operacoes que falham 
 IF SY-subrc IS INITIAL.
-*COMMIT WORK dá commit no banco dedos e AND WAIT pede para esperar
+*COMMIT WORK dá commit no banco dedos e AND WAIT pede para esperar a gravação dos dados no banco de dados
  COMMIT WORK AND WAIT.
 *mensagem de sucesso
  MESSAGE S208(00) WITH 'SALVO COM SUCESSO!'.
