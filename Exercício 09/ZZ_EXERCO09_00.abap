@@ -3,8 +3,8 @@ REPORT ZZ_EXERCO09_00.
  DATA: v_peso_ideal type p decimals 2,
 
  PARAMETERS: 
-      v_sexo(1) TYPE C,
-      v_altura TYPE decimals 2.
+      v_sexo(1) TYPE C OBLIGATORY,
+      v_altura TYPE decimals 2 OBLIGATORY.
 
 START-OF-SELECTION.
 
