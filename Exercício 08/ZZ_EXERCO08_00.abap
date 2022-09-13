@@ -1,7 +1,7 @@
 REPORT ZZ_EXERCO08_00.
 
  PARAMETERS: 
-      v_num TYPE I,
+      v_num TYPE I.
 
 START-OF-SELECTION.
 
