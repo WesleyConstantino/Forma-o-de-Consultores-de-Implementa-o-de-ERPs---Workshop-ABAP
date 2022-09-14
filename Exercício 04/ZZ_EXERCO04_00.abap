@@ -10,7 +10,7 @@ REPORT ZZ_EXERCO04_00.
          v_nota_4 TYPE p decimals 2.
 
 START-OF-SELECTION.
-v_media_aluno = v_nota_1 + v_nota_2 + v_nota_3 + v_nota_4 / 4.
+v_media_aluno = ( v_nota_1 + v_nota_2 + v_nota_3 + v_nota_4 ) / 4. 
 
 
 PERFORM f_exibe_msg.
