@@ -1,6 +1,6 @@
 REPORT ZZ_EXERCO09_00.
 
- DATA: v_peso_ideal type p decimals 2,
+ DATA: v_peso_ideal type p decimals 2.
 
  PARAMETERS: 
       v_sexo(1) TYPE C OBLIGATORY,
