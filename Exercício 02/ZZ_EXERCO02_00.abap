@@ -11,37 +11,37 @@ v_b = 2.
 v_c = 5.
 
 if v_a > v_b.
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
 
 if not ( v_b EQ v_a ).
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
 
 if not ( v_a >= v_b AND v_c <> 5 ).
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
 
 if v_b < v_a OR v_a EQ 3.
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
 
 if v_a > v_b OR v_a EQ 3.
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
 
 if v_c <= 7 AND v_b > 0 AND v_c > v_a.
-  WRITE:\ 'Verdadeiro!'.
+  WRITE:/'Verdadeiro!'.
 else.
-  WRITE:\ 'Falso!'.
+  WRITE:/'Falso!'.
 endif.
