@@ -1,6 +1,6 @@
 REPORT ZZ_EXERCO14_00.
 
- DATA: v_maior type I,
+DATA: v_maior type I,
        v_menor type I.
       
  PARAMETERS: 
@@ -21,8 +21,8 @@ PERFORM f_exibe_cres.
 PERFORM f_exibe_dcres.
 
 FORM f_exibe_cres.
-WRITE: 'Sequência crescente: ', v_menor v_maior.
+WRITE: 'Sequência crescente: ', v_menor , v_maior.
 ENDFORM.
 FORM f_exibe_dcres.
-WRITE:/ 'Sequência decrescente: ', v_maior v_menor.
+WRITE:/ 'Sequência decrescente: ', v_maior , v_menor.
 ENDFORM.
