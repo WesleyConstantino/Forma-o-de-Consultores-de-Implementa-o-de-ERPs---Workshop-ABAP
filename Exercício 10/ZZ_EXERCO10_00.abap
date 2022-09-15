@@ -1,7 +1,7 @@
 REPORT ZZ_EXERCO10_00.
 
 
- DATA: v_resultado type I.
+ DATA: v_resultado type I.  " p decimals 2.
 
  PARAMETERS: 
       v_n1 TYPE I,
