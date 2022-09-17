@@ -4,7 +4,7 @@ REPORT ZZ_EXERCO09_00.
 
  PARAMETERS: 
       v_sexo(1) TYPE C OBLIGATORY,
-      v_altura TYPE decimals 2 OBLIGATORY.
+      v_altura TYPE p decimals 2 OBLIGATORY.
 
 START-OF-SELECTION.
 
