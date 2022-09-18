@@ -1,14 +1,15 @@
 REPORT zhr_report_col38.
 
 *TABLES: zhr001_00.
-DATA:    v_re        TYPE zhr001_00-zz_re,
-         v_nome      TYPE zhr001_00-zz_nome_emp,
-         v_cargo     TYPE zhr001_00-zz_cargo,
-         v_stt       TYPE zhr001_00-zz_status_emp,
-         v_dtc       TYPE zhr001_00-zz_data_cad,
+DATA:    v_re        TYPE zhr001_38-zz_re,
+         v_nome      TYPE zhr001_38-zz_nome_emp,
+         v_cargo     TYPE zhr001_38-zz_cargo,
+         v_stt       TYPE zhr001_38-zz_status_emp,
+         v_dtc       TYPE zhr001_38-zz_data_cad,
 
-         t_out       TYPE TABLE OF zhr001_00, "TABELA INTERNA
-         wa_out      LIKE LINE OF t_out,  "ESTRUTURA / WORK AREA
+*Boas práricas usar t_out e wa_out pois, se mudarmos o nome da tabela zhr001_38 em t_out, não precisaremos alterar mais trechos de código no programa
+         t_out       TYPE TABLE OF zhr001_38, "TABELA INTERNA (matriz) para jogar os dados do BD e manipulá-los de forma indireta
+         wa_out      LIKE LINE OF t_out,  "ESTRUTURA / WORK AREA (linha) é uma linha de t_out
 *ALV
          t_fieldcat  TYPE  slis_t_fieldcat_alv,
          wa_fieldcat LIKE LINE OF t_fieldcat,
@@ -28,20 +29,20 @@ SELECTION-SCREEN END OF BLOCK b0.
 
 START-OF-SELECTION.
 
-  PERFORM f_buscar_dados.
-  PERFORM f_exibir_alv.
+  PERFORM f_buscar_dados. "Busca os dados da tabela transparente zhr001_38 e popula na tabela interna t_out. 
+  PERFORM f_exibir_alv. "Exibe o report
 
 
 *&---------------------------------------------------------------------*
 *&      Form  F_BUSCAR_DADOS
 *&---------------------------------------------------------------------*
-*       text
+*       DUPLO CLICK NO NOME DE UM PERFORME CRIA UM FORM
 *----------------------------------------------------------------------*
-*  -->  p1        text
-*  <--  p2        text
+*  -->  ESCOLHER A OPÇÃO DA SEGUNDA LINHA APÓS O DUPLO CLICK
+*  <--  
 *----------------------------------------------------------------------*
 FORM f_buscar_dados.
-  REFRESH: t_out[].
+  REFRESH: t_out[]. "Limpa uma tabela; é a mesma coisa de "CLEAR: t_out[]" ou "FREE: t_out[]"
 
   SELECT  mandt
           zz_re
