@@ -16,7 +16,9 @@ DATA:    v_re        TYPE zhr001_00-zz_re,
 
 *DATA: r_re     TYPE RANGE OF v_re.
 
+"001 é o código que demos ao título que escrevemos em "Ir para" -> "Elementos de texto" -> "Símbolos de texto"
 SELECTION-SCREEN BEGIN OF BLOCK b0 WITH FRAME TITLE text-001.
+*SELECT-OPTIONS cria labels "DE" e "ATÉ" no front-end; são dois compos numa mesma linha
 SELECT-OPTIONS: s_re     FOR v_re,
                 s_nome   FOR v_nome,
                 s_cargo  FOR v_cargo,
