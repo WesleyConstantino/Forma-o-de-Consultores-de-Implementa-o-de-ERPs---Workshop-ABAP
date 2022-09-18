@@ -44,14 +44,14 @@ START-OF-SELECTION.
 FORM f_buscar_dados.
   REFRESH: t_out[]. "Limpa uma tabela; é a mesma coisa de "CLEAR: t_out[]" ou "FREE: t_out[]"
 
-  SELECT  mandt
+  SELECT  mandt  "SELECT seleciona os campos "x" de uma tabela do BD
           zz_re
           zz_nome_emp
           zz_cargo
           zz_status_emp
           zz_data_cad
-    INTO TABLE t_out
-    FROM zhr001_00
+    INTO TABLE t_out  "INTO TABLE joga os campos do BD acima dentro da tabela interna TABLE t_out  
+    FROM zhr001_00  "É necessário também declarar de onde virão os campos que t_out receberá
     WHERE zz_re         IN s_re
       AND zz_nome_emp   IN s_nome
       AND zz_cargo      IN s_cargo
