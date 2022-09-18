@@ -52,17 +52,17 @@ FORM f_buscar_dados.
           zz_data_cad
     INTO TABLE t_out  "INTO TABLE joga os campos do BD acima dentro da tabela interna TABLE t_out  
     FROM zhr001_00  "É necessário também declarar de onde virão os campos que t_out receberá
-    WHERE zz_re         IN s_re
+    WHERE zz_re         IN s_re "Jogamos os conjuntos de dados dos campos da tabela interna "IN" dentro da tabebela transparente do BD
       AND zz_nome_emp   IN s_nome
       AND zz_cargo      IN s_cargo
       AND zz_status_emp IN s_stt
       AND zz_data_cad   IN s_dtc.
 
-  IF t_out[] IS INITIAL.
+  IF t_out[] IS INITIAL. "Verificar se a tabela está vazia
     MESSAGE e208(00) WITH 'NENHUM REGISTRO ENCONTRADO!'.
   ENDIF.
 
-  DELETE t_out WHERE zz_nome_emp IS INITIAL.
+  DELETE t_out WHERE zz_nome_emp IS INITIAL. "Deleta todos os campos do  t_out onde o zz_nome_emp está vazio
 
 *  cl_demo_output=>display_data( t_out ).
 
