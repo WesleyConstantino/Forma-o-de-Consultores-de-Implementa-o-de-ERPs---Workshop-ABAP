@@ -51,8 +51,8 @@ FORM f_buscar_dados.
           zz_status_emp
           zz_data_cad
     INTO TABLE t_out  "INTO TABLE joga os campos do BD acima dentro da tabela interna TABLE t_out  
-    FROM zhr001_00  "É necessário também declarar de onde virão os campos que t_out receberá
-    WHERE zz_re         IN s_re "Jogamos os conjuntos de dados dos campos da tabela transparente do BD "zhr001_00" "IN" dentro da tabebela interna "t_out" (populando a nossa tabela local)
+    FROM zhr001_38  "É necessário também declarar de onde virão os campos que t_out receberá
+    WHERE zz_re         IN s_re "Jogamos os conjuntos de dados dos campos da tabela transparente do BD "zhr001_38" "IN" dentro da tabebela interna "t_out" (populando a nossa tabela local)
       AND zz_nome_emp   IN s_nome
       AND zz_cargo      IN s_cargo
       AND zz_status_emp IN s_stt
@@ -92,7 +92,7 @@ FORM f_exibir_alv.
 
   CALL FUNCTION 'REUSE_ALV_FIELDCATALOG_MERGE'
     EXPORTING
-      i_structure_name       = 'ZHR001_00'
+      i_structure_name       = 'ZHR001_38'
       i_client_never_display = abap_true
     CHANGING
       ct_fieldcat            = t_fieldcat
