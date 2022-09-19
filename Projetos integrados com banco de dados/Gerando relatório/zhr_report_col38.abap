@@ -52,7 +52,7 @@ FORM f_buscar_dados.
           zz_data_cad
     INTO TABLE t_out  "INTO TABLE joga os campos do BD acima dentro da tabela interna TABLE t_out  
     FROM zhr001_00  "É necessário também declarar de onde virão os campos que t_out receberá
-    WHERE zz_re         IN s_re "Jogamos os conjuntos de dados dos campos da tabela interna "IN" dentro da tabebela transparente do BD
+    WHERE zz_re         IN s_re "Jogamos os conjuntos de dados dos campos da tabela transparente do BD "zhr001_00" "IN" dentro da tabebela interna "t_out" (populando a nossa tabela local)
       AND zz_nome_emp   IN s_nome
       AND zz_cargo      IN s_cargo
       AND zz_status_emp IN s_stt
