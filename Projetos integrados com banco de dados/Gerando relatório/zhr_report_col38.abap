@@ -141,8 +141,8 @@ FORM f_exibir_alv.
   ENDLOOP.
 
 
-  wa_layout-colwidth_optimize = abap_true.
-  wa_layout-zebra             = abap_true.
+  wa_layout-colwidth_optimize = abap_true.  "Aqui habilitamos o ujuste automático de coluna do layout ALV com "abap_true" 
+  wa_layout-zebra             = abap_true.  "Aqui habilitamos a cor zebra ao layout da tabela ALV com "abap_true"
 
   CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
     EXPORTING
