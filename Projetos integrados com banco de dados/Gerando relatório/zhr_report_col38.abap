@@ -39,7 +39,7 @@ START-OF-SELECTION.
 *       DUPLO CLICK NO NOME DE UM PERFORME CRIA UM FORM
 *----------------------------------------------------------------------*
 *  -->  ESCOLHER A OPÇÃO DA SEGUNDA LINHA APÓS O DUPLO CLICK
-*  <--  
+*  <--   
 *----------------------------------------------------------------------*
 FORM f_buscar_dados.
   REFRESH: t_out[]. "Limpa uma tabela; é a mesma coisa de "CLEAR: t_out[]" ou "FREE: t_out[]"
