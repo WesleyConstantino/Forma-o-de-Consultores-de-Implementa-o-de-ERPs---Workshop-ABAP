@@ -11,8 +11,8 @@ DATA:    v_re        TYPE zhr001_38-zz_re,
          t_out       TYPE TABLE OF zhr001_38, "TABELA INTERNA (matriz) para jogar os dados do BD e manipulá-los de forma indireta
          wa_out      LIKE LINE OF t_out,  "ESTRUTURA / WORK AREA (linha) é uma linha de t_out
 *ALV
-         t_fieldcat  TYPE  slis_t_fieldcat_alv,
-         wa_fieldcat LIKE LINE OF t_fieldcat,
+         t_fieldcat  TYPE  slis_t_fieldcat_alv, "t_fieldcat é uma tabela interna
+         wa_fieldcat LIKE LINE OF t_fieldcat, "wa_fieldcat é uma linha da tabela interna t_fieldcat
          wa_layout   TYPE  slis_layout_alv.
 
 *DATA: r_re     TYPE RANGE OF v_re.
