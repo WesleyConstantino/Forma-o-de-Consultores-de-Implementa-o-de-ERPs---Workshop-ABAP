@@ -168,7 +168,7 @@ ENDFORM.
 *  -->  p1        text
 *  <--  p2        text
 *----------------------------------------------------------------------*
-FORM f_cria_fcat USING VALUE(p_col_pos)
+FORM f_cria_fcat USING VALUE(p_col_pos)  "USING indica que t_fieldcat está recebendo como valor todos esses parametros a frente de VALUE
                        VALUE(p_fieldname)
                        VALUE(p_tabname)
                        VALUE(p_ref_tabname)
@@ -178,14 +178,14 @@ FORM f_cria_fcat USING VALUE(p_col_pos)
                        VALUE(p_hotspot).
 
   CLEAR: wa_fieldcat.
-  wa_fieldcat-col_pos       = p_col_pos.
-  wa_fieldcat-fieldname     = p_fieldname.
-  wa_fieldcat-tabname       = p_tabname.
-  wa_fieldcat-ref_tabname   = p_ref_tabname.
-  wa_fieldcat-ref_fieldname = p_ref_fieldname.
-  wa_fieldcat-seltext_m     = p_seltext_m.
-  wa_fieldcat-key           = p_key.
-  wa_fieldcat-hotspot       = p_hotspot.
+  wa_fieldcat-col_pos       = p_col_pos. "Posição da coluna
+  wa_fieldcat-fieldname     = p_fieldname. "Nome do campo que está na nossa t_out
+  wa_fieldcat-tabname       = p_tabname. "Referencia da tabela para sabermos o tipo de dados que vai ser apresentado em campo
+  wa_fieldcat-ref_tabname   = p_ref_tabname. "Referencias
+  wa_fieldcat-ref_fieldname = p_ref_fieldname. 
+  wa_fieldcat-seltext_m     = p_seltext_m. "Tipo de texto para ser exibido; aqui podemos escolher o tamanho da fonte wa_fieldcat-sel<Apertando ctrl + espaço é possível ver as opções>
+  wa_fieldcat-key           = p_key. "Indicar o campo chave com uma cor diferente para visualização do usuário 
+  wa_fieldcat-hotspot       = p_hotspot. "Posibilita colocar um hiperlink
   APPEND wa_fieldcat TO t_fieldcat.
 
 ENDFORM.
