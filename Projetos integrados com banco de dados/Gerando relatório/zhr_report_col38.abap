@@ -92,28 +92,28 @@ FORM f_exibir_alv.
 
   CALL FUNCTION 'REUSE_ALV_FIELDCATALOG_MERGE'
     EXPORTING
-      i_structure_name       = 'ZHR001_38'
-      i_client_never_display = abap_true
+      i_structure_name       = 'ZHR001_38' "Passamos o nome da nossa tabela transparente aqui
+      i_client_never_display = abap_true   "Para não exibir o MANDANTE na tela
     CHANGING
-      ct_fieldcat            = t_fieldcat
+      ct_fieldcat            = t_fieldcat  "Passamos o nome da nossa tabela interna t_fieldcat que foi criada lá em "DATA:", no início do código
     EXCEPTIONS
       inconsistent_interface = 1
       program_error          = 2.
 
 * EXEMPLO MODIFY
-*  LOOP AT t_fieldcat INTO wa_fieldcat.
+*  LOOP AT t_fieldcat INTO wa_fieldcat. "Para cada linha da Work-Area(wa_fieldcat) podermos definir algo. O loop vai ser feito uma vez por linha
 *    lv_tabix = sy-tabix.
 *
-*    CASE wa_fieldcat-fieldname.
+*    CASE wa_fieldcat-fieldname. "Variável local para guardar o número da linha que será processada "1" mensionado abaixo em "READ TABLE t_out INTO wa_out INDEX 1."
 *
 *      WHEN 'ZZ_RE'.
-*        READ TABLE t_out INTO wa_out INDEX 1.
+*        READ TABLE t_out INTO wa_out INDEX 1. "Lê a primeira linha da tabela t-out e joga o conteúdo lido para dentro da estrutura de dados wa_out
 *
-*        wa_fieldcat-hotspot = abap_true.
-*        MODIFY t_fieldcat FROM wa_fieldcat INDEX lv_tabix.
+*        wa_fieldcat-hotspot = abap_true. "Solicita que o campo chave da tabela ALV seja apresentade de outra cor para o usuário
+*        MODIFY t_fieldcat FROM wa_fieldcat INDEX lv_tabix. "Aplica a solicitação pedida na linha acima
 *
-*      WHEN 'ZZ_DATA_CAD'.
-*        wa_fieldcat-no_out = abap_true.
+*      WHEN 'ZZ_DATA_CAD'.   "Não queremos que o ALV exiba o campo "ZZ_DATA_CAD", então fazemos o comando abaixo
+*        wa_fieldcat-no_out = abap_true. "wa_fieldcat-no_out não oculta um determinado campo na ALV; nesse caso "ZZ_DATA_CAD" declarado acima
 *        MODIFY t_fieldcat FROM wa_fieldcat INDEX lv_tabix.
 *
 *      WHEN OTHERS.
