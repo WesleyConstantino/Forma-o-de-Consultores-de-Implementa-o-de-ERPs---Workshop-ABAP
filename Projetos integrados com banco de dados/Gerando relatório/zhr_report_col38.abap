@@ -13,7 +13,7 @@ DATA:    v_re        TYPE zhr001_38-zz_re,
 *ALV
          t_fieldcat  TYPE  slis_t_fieldcat_alv, "t_fieldcat é uma tabela interna
          wa_fieldcat LIKE LINE OF t_fieldcat, "wa_fieldcat é uma linha da tabela interna t_fieldcat
-         wa_layout   TYPE  slis_layout_alv.
+         wa_layout   TYPE  slis_layout_alv. "Deixa a tabela ALV ajustada ao tamanho dos textos automáticamente
 
 *DATA: r_re     TYPE RANGE OF v_re.
 
@@ -179,10 +179,10 @@ FORM f_cria_fcat USING VALUE(p_col_pos)  "USING indica que t_fieldcat está rece
 
   CLEAR: wa_fieldcat.
   wa_fieldcat-col_pos       = p_col_pos. "Posição da coluna
-  wa_fieldcat-fieldname     = p_fieldname. "Nome do campo que está na nossa t_out
-  wa_fieldcat-tabname       = p_tabname. "Referencia da tabela para sabermos o tipo de dados que vai ser apresentado em campo
-  wa_fieldcat-ref_tabname   = p_ref_tabname. "Referencias
-  wa_fieldcat-ref_fieldname = p_ref_fieldname. 
+  wa_fieldcat-fieldname     = p_fieldname. "Nome do campo que está na nossa tabela interna t_out. Ex: zz_re, zz_cargo...
+  wa_fieldcat-tabname       = p_tabname. "Referencia da tabela para sabermos o tipo de dados que vai ser apresentado em campo. No caso t_out
+  wa_fieldcat-ref_tabname   = p_ref_tabname. "Nome da tabela transparente. No caso zhr001_38
+  wa_fieldcat-ref_fieldname = p_ref_fieldname. "Nome da tabela de referencia. Ex: Também zz_re, zz_cargo...
   wa_fieldcat-seltext_m     = p_seltext_m. "Tipo de texto para ser exibido; aqui podemos escolher o tamanho da fonte wa_fieldcat-sel<Apertando ctrl + espaço é possível ver as opções>
   wa_fieldcat-key           = p_key. "Indicar o campo chave com uma cor diferente para visualização do usuário 
   wa_fieldcat-hotspot       = p_hotspot. "Posibilita colocar um hiperlink
