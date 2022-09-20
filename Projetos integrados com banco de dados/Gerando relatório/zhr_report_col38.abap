@@ -13,7 +13,7 @@ DATA:    v_re        TYPE zhr001_38-zz_re,
 *ALV
          t_fieldcat  TYPE  slis_t_fieldcat_alv, "t_fieldcat é uma tabela interna
          wa_fieldcat LIKE LINE OF t_fieldcat, "wa_fieldcat é uma linha da tabela interna t_fieldcat
-         wa_layout   TYPE  slis_layout_alv. "Deixa a tabela ALV ajustada ao tamanho dos textos automáticamente
+         wa_layout   TYPE  slis_layout_alv. "Alimentando o is_layout para deixar a tabela ALV ajustada ao tamanho dos textos automáticamente
 
 *DATA: r_re     TYPE RANGE OF v_re.
 
@@ -146,7 +146,7 @@ FORM f_exibir_alv.
 
   CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
     EXPORTING
-      is_layout     = wa_layout
+      is_layout     = wa_layout "Deixa a tabela ALV ajustada ao tamanho dos textos automáticamente
       it_fieldcat   = t_fieldcat
     TABLES
       t_outtab      = t_out
