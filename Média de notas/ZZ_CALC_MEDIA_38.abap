@@ -14,7 +14,7 @@ PARAMETERS: p_nota1 type p decimals 2,
 START-OF-SELECTION.
 v_media = ( p_nota1 + p_nota2 + p_nota3 + p_nota  ) / 4.
 
-IF v_media GE 7.
+IF v_media GE 7. "GE é igual a ">=" maior ou igual a
  v_resultado = 'Aprovado!'.
 ELSE.
   v_resultado = 'Resprovado!'.
