@@ -1,7 +1,7 @@
 REPORT ZZ_EXERCO18_38.
 
-PARAMETERS: p_horas TYPE i,
-            p_valor  TYPE netpr.
+PARAMETERS: p_horas TYPE p decimals 2,
+            p_valor  TYPE p decimals 2.
 
 DATA: v_salr TYPE p DECIMALS 2.
 
