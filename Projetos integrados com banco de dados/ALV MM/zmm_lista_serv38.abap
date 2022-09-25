@@ -24,6 +24,7 @@ TYPES: BEGIN OF type_serv,
        END OF type_waers.
 
 * 1 – Tela de seleção:
+********* PRIMEIRO PASSO ***********
 DATA: v_matnr  TYPE mara-matnr,
       v_matkl  TYPE mara-matkl,
       v_werks  TYPE marc-werks,
