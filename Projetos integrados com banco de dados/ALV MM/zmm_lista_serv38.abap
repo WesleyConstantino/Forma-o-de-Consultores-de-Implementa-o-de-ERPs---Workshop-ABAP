@@ -88,7 +88,7 @@ FORM f_select_data.
     INNER JOIN mbew
     ON marc~matnr EQ mbew~matnr
    AND marc~werks EQ mbew~bwkey
-    WHERE mara~matnr IN s_matnr
+    WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro
       AND mara~mtart EQ 'DIEN' "Tratar isso com STVARV
       AND mara~matkl IN s_matkl
       AND marc~werks IN s_werks
