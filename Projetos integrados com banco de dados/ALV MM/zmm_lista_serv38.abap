@@ -102,7 +102,7 @@ FORM f_select_data.
           maktx
    INTO TABLE t_makt
    FROM makt
-   FOR ALL ENTRIES IN t_serv
+   FOR ALL ENTRIES IN t_serv  "FOR ALL ENTRIES IN é similar ao INNER JOIN, porém só serve para fazer amarração de tabelas iternas e tem que ser usado antes de um "WHERE"
    WHERE matnr EQ t_serv-matnr
      AND spras EQ sy-langu.
 
