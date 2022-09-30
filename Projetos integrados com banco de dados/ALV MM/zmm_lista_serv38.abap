@@ -118,7 +118,7 @@ WHERE t001w~werks IN s_werks.
   SORT t_makt BY matnr.
   SORT t_waers BY werks.
 
-  LOOP AT t_serv INTO wa_serv.
+  LOOP AT t_serv INTO wa_serv. "LOOP AT pega o conteúde de que está na tabela interna "t_serv" e joga dentro da work area "wa_serv"
     CLEAR: wa_makt,
            wa_waers.
 
