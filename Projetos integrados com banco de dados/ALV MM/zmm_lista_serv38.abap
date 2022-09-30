@@ -44,7 +44,7 @@ DATA: v_matnr  TYPE mara-matnr,
 * 3 – Output
       t_out    TYPE TABLE OF zsmm_lista_serv00.
 
-INCLUDE zalv_00.
+INCLUDE zalv_00. "Chama zalv_00
 
 "FIELD-SYMBOLS: <cria um field symbol> 
 FIELD-SYMBOLS: <lfs_line> TYPE zsmm_lista_serv00.   "zsmm_lista_serv00 é a ESTRUTURA DE DADOS que foi criada na SE11 para o output (saída de dados)
