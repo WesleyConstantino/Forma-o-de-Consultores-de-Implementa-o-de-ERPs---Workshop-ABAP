@@ -83,14 +83,15 @@ FORM f_select_data.
           mbew~stprs
           mbew~peinh
     INTO TABLE t_serv  "INTO TABLE joga todo conteúdo do SELECT acima na tabela "t_serv"
-    FROM mara INNER JOIN marc
-    ON mara~matnr EQ marc~matnr
-    INNER JOIN mbew
-    ON marc~matnr EQ mbew~matnr
-   AND marc~werks EQ mbew~bwkey
-    WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro
-      AND mara~mtart EQ 'DIEN' "Tratar isso com STVARV
-      AND mara~matkl IN s_matkl "IN é usado para comparação de igualdade
+    FROM mara INNER JOIN marc  "Seleciona campos da "mara" que contém em "marc" a relação a baixo
+    ON mara~matnr EQ marc~matnr  "Onde os campos "mara~matnr" e "marc~matnr" são iguais
+    INNER JOIN mbew  "Da "marc" vamos para "mbew"
+    ON marc~matnr EQ mbew~matnr "Onde estes dois campos são iguais
+   AND marc~werks EQ mbew~bwkey  "E também esses
+    WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro / daqui |1| até |3| temos os parametros de seleção
+      AND mara~mtart EQ 'DIEN' "Tratar isso com STVARV                                            "|2|                   
+      AND mara~matkl IN s_matkl "IN é usado para comparação de igualdade                          "|3|  
+      
       AND marc~werks IN s_werks
       AND marc~ekgrp IN s_ekgrp.
 
