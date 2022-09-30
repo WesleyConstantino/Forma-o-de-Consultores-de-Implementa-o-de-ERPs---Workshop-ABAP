@@ -122,7 +122,7 @@ WHERE t001w~werks IN s_werks.
     CLEAR: wa_makt,
            wa_waers.
 
-    APPEND INITIAL LINE TO t_out ASSIGNING <lfs_line>.
+    APPEND INITIAL LINE TO t_out ASSIGNING <lfs_line>. "Cria uma linha vazia dentro do t_out e assina com o FIELD-SYMBOL <lfs_line>
 
     MOVE-CORRESPONDING wa_serv TO <lfs_line>.
 
