@@ -140,7 +140,7 @@ WHERE t001w~werks IN s_werks.
     READ TABLE t_makt INTO wa_makt WITH KEY matnr = <lfs_line>-matnr " "READ TABLE" : Procure dentro da tabela "t_makt" através do campo chave "matnr" (WITH KEY) o valor <lfs_line>-matnr
                                             BINARY SEARCH. "lê a tabela, como se fosse um READ TABLE.                               "caso enconte o valor, transfira para dentro de  "wa_makt" (INTO)
     IF sy-subrc IS INITIAL.
-      <lfs_line>-maktx = wa_makt-maktx.
+      <lfs_line>-maktx = wa_makt-maktx.  "Se os comandos do READ TABLE a cima derem certo, preenchemos <lfs_line>-maktx.
     ENDIF.
 
     READ TABLE t_waers INTO wa_waers WITH KEY werks = <lfs_line>-werks
