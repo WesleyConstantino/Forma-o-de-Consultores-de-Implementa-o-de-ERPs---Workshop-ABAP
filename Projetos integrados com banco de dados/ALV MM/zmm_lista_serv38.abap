@@ -94,7 +94,7 @@ FORM f_select_data.
       AND marc~werks IN s_werks                                                                   "|4| 
       AND marc~ekgrp IN s_ekgrp.                                                                  "|5| 
 
-  IF t_serv[] IS INITIAL.
+  IF t_serv[] IS INITIAL. "Valida se a tabela t_serv foi preenchida como o esterado com os comandos acima
     MESSAGE e208(00) WITH 'NENHUM REGISTRO ENCONTRADO!'.
   ENDIF.
 
