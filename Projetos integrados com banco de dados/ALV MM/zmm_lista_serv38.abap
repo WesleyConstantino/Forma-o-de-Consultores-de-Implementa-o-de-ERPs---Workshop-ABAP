@@ -82,7 +82,7 @@ FORM f_select_data.
           mbew~verpr
           mbew~stprs
           mbew~peinh
-    INTO TABLE t_serv
+    INTO TABLE t_serv  "INTO TABLE joga todo conteúdo do SELECT acima na tabela "t_serv"
     FROM mara INNER JOIN marc
     ON mara~matnr EQ marc~matnr
     INNER JOIN mbew
