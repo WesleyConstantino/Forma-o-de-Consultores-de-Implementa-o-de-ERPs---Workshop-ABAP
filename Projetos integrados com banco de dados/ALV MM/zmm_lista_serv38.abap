@@ -115,7 +115,7 @@ INNER JOIN t001
 ON t001~bukrs EQ t001k~bukrs
 WHERE t001w~werks IN s_werks.
 
-  SORT t_makt BY matnr.
+  SORT t_makt BY matnr. "Odena a tabela para que possa ser lida no comando "READ TABLE t_makt INTO wa_makt WITH KEY matnr = <lfs_line>-matnr" que está na linha 140 
   SORT t_waers BY werks.
 
   LOOP AT t_serv INTO wa_serv. "LOOP AT pega o conteúde que está na tabela interna "t_serv" e joga dentro da work area "wa_serv"
