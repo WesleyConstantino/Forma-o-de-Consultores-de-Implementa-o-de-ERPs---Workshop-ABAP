@@ -90,7 +90,7 @@ FORM f_select_data.
    AND marc~werks EQ mbew~bwkey
     WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro
       AND mara~mtart EQ 'DIEN' "Tratar isso com STVARV
-      AND mara~matkl IN s_matkl
+      AND mara~matkl IN s_matkl "IN é usado para comparação de igualdade
       AND marc~werks IN s_werks
       AND marc~ekgrp IN s_ekgrp.
 
