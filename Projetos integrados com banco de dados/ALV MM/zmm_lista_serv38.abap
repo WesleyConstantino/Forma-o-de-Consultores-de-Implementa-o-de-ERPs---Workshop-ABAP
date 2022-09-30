@@ -47,7 +47,7 @@ DATA: v_matnr  TYPE mara-matnr,
 INCLUDE zalv_00.
 
 
-FIELD-SYMBOLS: <lfs_line> TYPE zsmm_lista_serv00.
+FIELD-SYMBOLS: <lfs_line> TYPE zsmm_lista_serv00.   "zsmm_lista_serv00 é a ESTRUTURA DE DADOS que foi criada na SE11 para o output (saída de dados)
 
 * 1 – Tela de seleção:
 SELECTION-SCREEN BEGIN OF BLOCK b0 WITH FRAME TITLE text-s01.
