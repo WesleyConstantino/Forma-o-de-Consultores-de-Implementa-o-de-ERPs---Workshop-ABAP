@@ -72,7 +72,7 @@ START-OF-SELECTION.
 *----------------------------------------------------------------------*
 FORM f_select_data.
 
-  SELECT  mara~matnr
+  SELECT  mara~matnr   "Os ítens deste SELECT deve estar na mesma sequência dos ítens de "TYPES: BEGIN OF type_serv", senão não dará certo
           mara~mtart
           mara~meins
           mara~matkl
