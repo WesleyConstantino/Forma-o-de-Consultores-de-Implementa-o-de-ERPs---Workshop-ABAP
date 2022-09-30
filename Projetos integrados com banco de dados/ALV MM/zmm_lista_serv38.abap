@@ -88,12 +88,11 @@ FORM f_select_data.
     INNER JOIN mbew  "Da "marc" vamos para "mbew"
     ON marc~matnr EQ mbew~matnr "Onde estes dois campos são iguais
    AND marc~werks EQ mbew~bwkey  "E também esses
-    WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro / daqui |1| até |3| temos os parametros de seleção
+    WHERE mara~matnr IN s_matnr "WHERE <condição> são as condições da pesquisa do registro / daqui |1| até |5| temos os parametros de seleção
       AND mara~mtart EQ 'DIEN' "Tratar isso com STVARV                                            "|2|                   
-      AND mara~matkl IN s_matkl "IN é usado para comparação de igualdade                          "|3|  
-      
-      AND marc~werks IN s_werks
-      AND marc~ekgrp IN s_ekgrp.
+      AND mara~matkl IN s_matkl "IN é usado para comparação de igualdade                          "|3|        
+      AND marc~werks IN s_werks                                                                   "|4| 
+      AND marc~ekgrp IN s_ekgrp.                                                                  "|5| 
 
   IF t_serv[] IS INITIAL.
     MESSAGE e208(00) WITH 'NENHUM REGISTRO ENCONTRADO!'.
