@@ -124,7 +124,7 @@ WHERE t001w~werks IN s_werks.
 
     APPEND INITIAL LINE TO t_out ASSIGNING <lfs_line>. "Cria uma linha vazia dentro do t_out e assina com o FIELD-SYMBOL <lfs_line>
 
-    MOVE-CORRESPONDING wa_serv TO <lfs_line>.
+    MOVE-CORRESPONDING wa_serv TO <lfs_line>. "Preenche altomaticamente todos os campos de no e tipo do wa_serv para <lfs_line> 
 
 
 *    SE O CAMPO MBEW- VPRSV FOR IGUAL A ‘V’
