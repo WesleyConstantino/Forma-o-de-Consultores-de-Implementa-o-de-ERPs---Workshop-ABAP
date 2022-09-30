@@ -1,6 +1,6 @@
 REPORT zmm_lista_serv38.
 
-TYPES: BEGIN OF type_serv,
+TYPES: BEGIN OF type_serv,      "BEGIN OF serve para escolher os campos que quero que sejam lidos de uma determinada tabela transparente
          matnr TYPE mara-matnr,
          mtart TYPE mara-mtart,
          meins TYPE mara-meins,
