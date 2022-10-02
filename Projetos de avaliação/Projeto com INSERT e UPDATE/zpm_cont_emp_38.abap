@@ -32,7 +32,7 @@ CALL FUNCTION 'NUMBER_GET_NEXT'
     interval_overflow       = 6
     buffer_overflow         = 7.
 
-"tb0 é o título que definimos em elemento de texto -> Símbolos de texto
+"tb0 é o título que definimos em elemento de texto -> Símbolos de texto 
 SELECTION-SCREEN BEGIN OF BLOCK b0 WITH FRAME TITLE text-tb0.
 PARAMETERS: p_data  TYPE ztpm001_38-data_emp DEFAULT sy-datum,
             p_hora  TYPE ztpm001_38-hora_emp DEFAULT sy-uzeit,
